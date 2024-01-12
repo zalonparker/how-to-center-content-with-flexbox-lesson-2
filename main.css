@@ -1,0 +1,110 @@
+/* Global styles */
+body {
+  color: #524f4f;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+}
+
+header,
+article,
+footer {
+  background: #F5C4C4;
+  /* Add Flexbox properties to create parent flex containers and to center the content-wrapper */
+  display: flex;
+  justify-content: center;
+}
+
+.content-wrapper {
+  width: 90%;
+  max-width: 1200px;
+}
+
+
+
+/* Header styles */
+header {
+  padding: 25px 0 25px 0;
+}
+
+header .content-wrapper {
+  /* Add Flexbox properties to make the "content-wrapper" a parent flex container and to center the h1 on a mobile site */
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'Play', sans-serif;
+  /* Font-size can be adjusted for mobile so that your name fits on a single row. */
+  font-size: 3rem;
+}
+
+h2 {
+  font-family: 'Play', sans-serif;
+  font-size: 2rem;
+}
+
+/* Main styles */
+
+article .content-wrapper {
+  /* Add Flexbox properties to center the elements and cause them to wrap so that the image is above the text. */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgba(252, 240, 240, 0.2);
+  padding: 70px 0;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.profile-image-container {
+  width: 60%;
+  padding-bottom: 20px;
+}
+
+.profile-image {
+  width: 100%;
+  border-radius: 20px;
+  /* https://getcssscan.com/css-box-shadow-examples */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.profile-description {
+  width: 80%;
+  padding-bottom: 20px;
+  border-bottom: 5px solid #F5C4C4;
+}
+
+/* Footer styles */
+footer {
+  padding: 50px 0 50px 0;
+}
+
+footer .content-wrapper {
+  /* Add Flexbox properties to make the "content-wrapper" a parent flex container and to center the copyright */
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+
+  header .content-wrapper {
+    /* Add Flexbox properties to move the h1 to the left at the start of the content-wrapper */
+    justify-content: flex-start;
+  }
+
+  article .content-wrapper {
+    /* Add Flexbox properties so that the extra space in the content-wrapper is around the child items and align them at their centers */
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .profile-image-container {
+    width: 30%;
+    padding-bottom: 0;
+  }
+
+  .profile-description {
+    width: 45%;
+  }
+
+}
